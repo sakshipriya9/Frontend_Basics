@@ -1,0 +1,78 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+#parent {
+    /* Flex Container */
+    border: solid red 10px;
+    display: flex;
+    height: 500px;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: center;
+    align-content: start;
+}
+
+#parent div {
+    border: solid blue 2px;
+    padding: 20px;
+    background-color: bisque;
+    min-width: 100px;
+    max-height: 100px;
+}
+
+#child1 {
+    flex-basis: 100px
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav button {
+    margin-left: 10px;
+}
+
+.signin {
+    background-color: rgb(242, 37, 37);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.signin:hover {
+    background-color: rgb(193, 17, 25);
+}
+
+.reset {
+    background-color: rgb(32, 6, 69);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.name{
+    font-size: larger;
+    font-weight: bolder;
+    color: rgb(10, 5, 26);
+}
