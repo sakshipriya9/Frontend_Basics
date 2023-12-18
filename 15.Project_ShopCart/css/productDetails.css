@@ -42,3 +42,7 @@
      margin-top: 1.5rem;
      width: 250px;
  }
+
+ .product-actions {
+    gap: 1rem;
+ }
