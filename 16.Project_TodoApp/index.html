@@ -18,19 +18,19 @@
             <div class="row">
                 <div class="input-section d-flex flex-row justify-content-center">
                     <div class="todo-input">
-                        <input type="text" class="form-control" placeholder="write another todos">
+                        <input type="text" class="form-control" placeholder="write another todos" id="todo-input-bar">
                     </div>
-                    <div class="save-todo btn btn-primary">
+                    <div class="save-todo btn btn-primary disabled" id="save-todo">
                         save
                     </div>
-                    <div class="get-todos btn btn-warning">
+                    <div class="get-todos btn btn-warning" id="get-todos">
                         Get Pending Todos
                     </div>
                 </div>
             </div>
 
             <!-- List Of Todos -->
-            <div class="todo-data">
+            <div class="todo-data" id="todo-data">
                 <div class="row">
                     <div class="todo-list-heading d-flex flex-row justify-content-between">
                         <div class="todo-no">No</div>
@@ -41,21 +41,25 @@
                 </div>
                 <hr>
 
+                <div class="todo-data-list" id="todo-data-list">
+
+                </div>
+
                 <!-- Actual Todos -->
-                <div class="row">
+                <!-- <div class="row">
                     <div class="todo-item d-flex flex-row justify-content-between align-items-center">
                         <div class="todo-no">1</div>
                         <div class="todo-details text-muted">Complete JS & DSA</div>
                         <div class="todo-status text-muted">In Progress</div>
-                        <div class="todo-actions">
+                        <div class="todo-actions d-flex justify-content-start gap-2">
                             <button class="btn btn-danger">Delete</button>
                             <button class="btn btn-success">Finished</button>
                         </div>
                     </div>
                     <hr>
-                </div>
+                </div> -->
 
-                <div class="row">
+                <!-- <div class="row">
                     <div class="todo-item d-flex flex-row justify-content-between align-items-center">
                         <div class="todo-no">2</div>
                         <div class="todo-details text-muted">Start to make a project with React & Node.JS</div>
@@ -66,9 +70,9 @@
                         </div>
                     </div>
                     <hr>
-                </div>
+                </div> -->
 
-                <div class="row">
+                <!-- <div class="row">
                     <div class="todo-item d-flex flex-row justify-content-between align-items-center">
                         <div class="todo-no">3</div>
                         <div class="todo-details text-muted">Complete the required five projects</div>
@@ -79,7 +83,7 @@
                         </div>
                     </div>
                     <hr>
-                </div>
+                </div> -->
 
             </div>
         </div>
