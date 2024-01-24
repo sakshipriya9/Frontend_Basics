@@ -15,7 +15,7 @@ html {
 
 #paddle {
     background-color: blue;
-    width: 10px;
+    width: 20px;
     height: 70px;
     margin-left: 2px;
     position: absolute;
