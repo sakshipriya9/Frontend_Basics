@@ -51,3 +51,11 @@ html {
 #header .header-wrapper .user-actions a:hover {
     text-decoration-line: underline;
 }
+
+.clear-filter {
+    margin-top: 1rem;
+}
+
+.price-filter .price-filter-select>div {
+    margin-bottom: 0.5rem;
+}

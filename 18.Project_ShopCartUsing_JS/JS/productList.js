@@ -1,11 +1,17 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     async function fetchProducts(){
         const response = await axios.get("https://fakestoreapi.com/products");
         console.log(response.data);
         return response.data;
     }
-    async function populateProducts(){
-        const products = await fetchProducts();
+
+    const downloadedProducts = await fetchProducts();
+    
+    async function populateProducts(flag, customProducts){
+        let products = customProducts;
+        if(flag == false){
+            products = await fetchProducts();
+        }
         const productList = document.getElementById("productList");
         products.forEach(product => {
             const productItem = document.createElement("a");
@@ -35,6 +41,23 @@ document.addEventListener("DOMContentLoaded", () => {
             productList.appendChild(productItem);
         });
     }
-    populateProducts();
+    populateProducts(false);
+
+    const filterSearch = document.getElementById("search");
+    filterSearch.addEventListener("click" , async() => {
+        const productList = document.getElementById("productList");
+        const maxPrice = Number(document.getElementById("maxPrice").value);
+        const minPrice = Number(document.getElementById("minPrice").value);
+        const products = downloadedProducts;
+        filteredProducts = products.filter(product => product.price >= minPrice && product.price <= maxPrice);
+        productList.innerHTML = "";
+        populateProducts(true, filteredProducts);
+
+    });
+
+    const resetFilter = document.getElementById("clear");
+    resetFilter.addEventListener("click" , () => {
+        window.location.reload();
+    })
 
 });
