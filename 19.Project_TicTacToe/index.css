@@ -1,0 +1,37 @@
+#outer {
+    width: 600px;
+    height: 600px;
+    padding: 5px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inner {
+    width: 180px;
+    height: 180px;
+    border: 1px solid red;
+    flex-basis: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    background-color: antiquewhite;
+}
+
+#result{
+    font-size: 40px;
+    width: 612px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(17,66,92);
+    color: azure;
+}
+
+#game-title{
+    color: red;
+    margin-left: 200px;
+}
